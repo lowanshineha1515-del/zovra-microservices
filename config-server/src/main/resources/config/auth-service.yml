@@ -1,0 +1,23 @@
+server:
+  port: 8084
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/auth_db
+    username: postgres
+    password: Neha@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
